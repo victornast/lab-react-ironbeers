@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 
 import { oneBeer } from './../api/ironbeers-api';
 
+import HomeButton from './../components/HomeButton';
+import BeerDetail from './../components/BeerDetail';
+
 class DetailedBeer extends Component {
   state = { beer: null };
 
@@ -17,19 +20,10 @@ class DetailedBeer extends Component {
   render() {
     const beer = this.state.beer;
     return (
-      <article>
-        {beer && (
-          <>
-            <img src={beer.image_url} alt={beer.name} />
-            <h2>{beer.name}</h2>
-            <p>{beer.tagline}</p>
-            <p>{beer.first_brewed}</p>
-            <p>{beer.attenuation_level}</p>
-            <p>{beer.description}</p>
-            <small>{beer.contributed_by}</small>
-          </>
-        )}
-      </article>
+      <>
+        <HomeButton />
+        {beer && <BeerDetail beer={beer} />}
+      </>
     );
   }
 }
