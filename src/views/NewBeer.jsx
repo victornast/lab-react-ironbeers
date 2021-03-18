@@ -26,10 +26,10 @@ class NewBeer extends Component {
     this.setState({ beer });
   };
 
-  handleFormSubmission = (event) => {
-    // event.preventDefault();
+  handleFormSubmission = async (event) => {
+    event.preventDefault();
     const { beer } = this.state;
-    addBeer(beer);
+    await addBeer(beer);
     this.setState({
       beer: {
         name: '',
@@ -41,6 +41,7 @@ class NewBeer extends Component {
         contributed_by: '',
       },
     });
+    this.props.history.push('/beers');
   };
 
   render() {
