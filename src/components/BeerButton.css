@@ -1,7 +1,32 @@
 .beer-button {
-  width: 100%;
+  display: flex;
+  margin: 2em 3em;
+  text-decoration: none;
+  color: black;
+  padding-bottom: 2em;
+  border-bottom: 1px solid gainsboro;
+}
+
+.beer-button__image-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 4em;
+  margin-right: 3em;
 }
 
 .beer-button__image {
-  width: 100%;
+  display: block;
+  max-height: 9em;
+  max-width: 100%;
+}
+
+.beer-button__title {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.beer-button__tagline {
+  margin: 0;
+  font-size: 1.1rem;
+  color: gray;
 }

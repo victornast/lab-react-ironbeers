@@ -5,6 +5,9 @@ import HomeButton from './../components/HomeButton';
 import { allBeers, filterBeers } from './../api/ironbeers-api';
 import BeerButton from '../components/BeerButton';
 
+import './../utilities.css';
+import './AllBeers.css';
+
 class AllBeers extends Component {
   state = {
     list: [],
@@ -29,15 +32,17 @@ class AllBeers extends Component {
 
   render() {
     return (
-      <div>
+      <div className="all-beers">
         <HomeButton />
-        <h2>All Beers</h2>
         {this.state.list.map((beer) => (
           <BeerButton key={beer._id} beer={beer} />
         ))}
-        <form>
-          <label htmlFor="beer-filter">Search</label>
+        <form className="search-form">
+          <label className="sr-only" htmlFor="beer-filter">
+            Search
+          </label>
           <input
+            className="search-form__input"
             type="text"
             placeholder="Filter beers"
             id="beer-filter"
