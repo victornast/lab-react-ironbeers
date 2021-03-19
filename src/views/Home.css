@@ -1,0 +1,25 @@
+.homepage-action {
+  display: block;
+  text-decoration: none;
+}
+
+.homepage-action:not(:last-child) {
+  padding-bottom: 1.5em;
+}
+
+.homepage-action__image {
+  width: 100%;
+  padding: 0 2px;
+}
+
+.homepage-action__title {
+  margin: 0 1em;
+  color: black;
+  font-weight: 600;
+}
+
+.homepage-action__description {
+  margin: 0 1.5em;
+  color: darkgray;
+  font-weight: 300;
+}
