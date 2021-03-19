@@ -1,0 +1,59 @@
+.beer-detail {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    'media media'
+    'title alevel'
+    'tagline date'
+    'description description'
+    'author author';
+  margin: 3em 2em;
+}
+
+.beer-detail__media {
+  grid-area: media;
+  display: flex;
+  justify-content: center;
+}
+
+.beer-detail__image {
+  max-width: 5em;
+}
+
+.beer-detail__title {
+  grid-area: title;
+  font-weight: 600;
+  font-size: 2rem;
+  margin: 0.5em 0;
+}
+
+.beer-detail__tagline {
+  color: darkgray;
+  font-size: 1.2rem;
+  margin: 0.5em 0;
+}
+
+.beer-detail__date {
+  grid-area: date;
+  font-size: 1.2rem;
+  margin: 0.5em 0;
+}
+
+.beer-detail__alevel {
+  grid-area: alevel;
+  text-align: right;
+  font-weight: 600;
+  font-size: 2rem;
+  color: darkgray;
+  margin: 0.5em 0;
+}
+
+.beer-detail__description {
+  grid-area: description;
+}
+
+.beer-detail__author {
+  grid-area: author;
+  font-size: 85%;
+  color: darkgray;
+}

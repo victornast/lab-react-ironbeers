@@ -1,15 +1,23 @@
 import React from 'react';
 
+import './BeerDetail.css';
+
 function BeerDetail({ beer }) {
   return (
-    <article>
-      <img src={beer.image_url} alt={beer.name} height="150px" />
-      <h2>{beer.name}</h2>
-      <p>{beer.tagline}</p>
-      <p>{beer.first_brewed}</p>
-      <p>{beer.attenuation_level}</p>
-      <p>{beer.description}</p>
-      <small>{beer.contributed_by}</small>
+    <article className="beer-detail">
+      <div className="beer-detail__media">
+        <img
+          className="beer-detail__image"
+          src={beer.image_url}
+          alt={beer.name}
+        />
+      </div>
+      <h2 className="beer-detail__title">{beer.name}</h2>
+      <p className="beer-detail__tagline">{beer.tagline}</p>
+      <p className="beer-detail__date">{beer.first_brewed}</p>
+      <p className="beer-detail__alevel">{beer.attenuation_level}</p>
+      <p className="beer-detail__description">{beer.description}</p>
+      <p className="beer-detail__author">{beer.contributed_by}</p>
     </article>
   );
 }
