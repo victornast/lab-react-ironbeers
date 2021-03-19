@@ -5,8 +5,18 @@
   position: sticky;
   top: 0;
   padding: 0.5em;
-  border: 2px solid rebeccapurple;
-  background-color: purple;
+  border: 1px solid #2a88af;
+  background-color: #3dc4fc;
+}
+
+.home-button::before {
+  content: ' ';
+  position: absolute;
+  top: 1px;
+  bottom: 1px;
+  left: 1px;
+  right: 1px;
+  border: 1px solid gainsboro;
 }
 
 .home-button__svg {

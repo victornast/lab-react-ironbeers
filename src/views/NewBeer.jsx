@@ -4,6 +4,8 @@ import HomeButton from './../components/HomeButton';
 
 import { addBeer } from './../api/ironbeers-api';
 
+import './NewBeer.css';
+
 class NewBeer extends Component {
   state = {
     beer: {
@@ -48,8 +50,11 @@ class NewBeer extends Component {
     return (
       <div>
         <HomeButton />
-        <h2>Add a new Beer</h2>
-        <form action="/beers" onSubmit={this.handleFormSubmission}>
+        <form
+          className="new-beer__form"
+          action="/beers"
+          onSubmit={this.handleFormSubmission}
+        >
           <label htmlFor="name">Name</label>
           <input
             type="text"
@@ -71,7 +76,9 @@ class NewBeer extends Component {
           />
 
           <label htmlFor="description">Description</label>
-          <input
+          <textarea
+            className="new-beer__form-description"
+            rows="6"
             type="text"
             id="description"
             name="description"
